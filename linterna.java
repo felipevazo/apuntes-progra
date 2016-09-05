@@ -55,11 +55,13 @@ public class linterna
        {
        if(nivelPotencia==1)
         { 
-          nivelPotencia=1;        
+          nivelPotencia=1;   
+          conf=false;
         }
         else if (nivel==2)
         {
             nivelPotencia=2;
+            conf=false;
         }
         else
         {
