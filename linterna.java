@@ -47,6 +47,19 @@ public class linterna
     }
     
    }
+   public void descargarBateria()throws InterruptedException
+   {
+       estado=true;
+       while(nivelBateria>0)
+       {
+            Thread.sleep(1000);
+            nivelBateria=nivelBateria-5;
+            System.out.println(nivelBateria+5);
+           
+        }
+       estado=false;
+       System.out.println("El estado de la linterna ahora es"+estado);
+    }
    
    public void setPotencia(int nivel)
    { boolean conf=true;
@@ -70,6 +83,10 @@ public class linterna
         }
     }
     }
+    public void setBateria(int b)
+{
+    nivelBateria=b;
+}
           private String defString(String str)
   { 
       System.out.println("Ingrese "+str);
