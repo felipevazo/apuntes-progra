@@ -17,3 +17,8 @@ Ej: Class Princiapal
      main(...)
         MiVentana mV=new MiVentana();
              mV.setVisible(true);
+
+
+
+Los objetos son instancias especificas de los atributos
+crear clase: crear modelo.
