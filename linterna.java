@@ -17,6 +17,20 @@ public class linterna
         nivelBateria=50;
   
     }
+    public int getnivelPotencia()
+    {
+        return nivelPotencia;
+      
+         }
+    public boolean getEstado()
+    {
+        return estado;
+        
+    }
+    public String getTamaño()
+    {
+        return tamaño;
+    }
 
     public void setEstado(String str)
     {
@@ -76,6 +90,11 @@ public class linterna
             nivelPotencia=2;
             conf=false;
         }
+        else if(nivel==0)
+        {
+            nivelPotencia=0;
+            conf=false;
+        }
         else
         {
             datoInvalido();
@@ -83,9 +102,30 @@ public class linterna
         }
     }
     }
+    public void apagarLinterna()
+    {
+        setEstado("apagar");
+        setPotencia(0);
+        
+    }
+    public void encenderLinterna()
+    {
+        setEstado("encender");
+        setPotencia(1);
+        
+    }
+    
     public void setBateria(int b)
 {
     nivelBateria=b;
+}
+public void setColor(String str)
+{
+    color=str;
+}
+public void setTamaño(String str)
+{
+    tamaño=str;
 }
           private String defString(String str)
   { 
@@ -106,4 +146,17 @@ public class linterna
    {
        System.out.println("Dato invalido, intente nuevamente");
        } 
+       
+       
+       public String toString()
+       {
+           String mensaje="La linterna es de un tamaño "+tamaño+", de color "+color+", esta en un nivel de potencia "+nivelPotencia+", su estado es "+estado+" y su nivel de bateria es "+nivelBateria;
+           
+           return mensaje;
+       }
+       public void mostrar()
+       {
+           System.out.println(toString());
+       }
+       
         }
