@@ -22,3 +22,14 @@ Ej: Class Princiapal
 
 Los objetos son instancias especificas de los atributos
 crear clase: crear modelo.
+
+Mismo nombre: define constructores
+2 constructores
+
+Nombreclase(){
+....
+}-> llena todos iguales
+
+Nombreclase(String atributo1, String atributo2){
+...
+}-> Todos diferentes segun atributos otrorgados al metodo 
